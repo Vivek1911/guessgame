@@ -1,0 +1,26 @@
+#/usr/bin/env bash
+
+all: README.md
+
+README.md: guessinggame.sh
+	echo "## The Operating System's Unix Workbench Course Peer-Graded Assignment" > README.md
+	echo "*by the Johns Hopkins University on [coursera.org](https://www.coursera.org/).*" >> README.md
+	echo "\\" >> README.md	
+	echo "**Description**: Create a program file named *guessinggame.sh*. The program should continuously ask the user to guess the number of files in the current directory, until they guess the correct number. The user is informed whether their guess is too high or too low. Once the user guesses the correct number of files in the current directory then they should be congratulated." >> README.md
+	echo "\\" >> README.md
+	echo -n "**Upload Date **: " >> README.md
+	date >> README.md
+	echo "\\" >> README.md
+	echo -n "**Number of lines in the guessinggame.sh:** " >> README.md
+	wc -l guessinggame.sh | egrep -o "[0-9]+" >> README.md
+	echo "" >> README.md
+	echo "**Hurray! **" >> README.md
+	echo "" >> README.md
+	echo "**KUDOS!! to you**" >> README.md
+	echo "" >> README.md
+	echo "**Warm Regards,**" >> README.md
+	echo "\\" >> README.md
+	echo "**Vivek Dubey**" >> README.md
+
+clean:
+	rm README.md
